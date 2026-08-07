@@ -1,0 +1,63 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  sizes?: string;
+  class?: string;
+  priority?: boolean;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  sizes = '100vw',
+  class: className,
+  priority = false,
+} = Astro.props;
+
+const fallback = '/placeholders/image-placeholder.svg';
+const source = src?.trim() || fallback;
+let isUnsplash = false;
+
+try {
+  isUnsplash = new URL(source).hostname === 'images.unsplash.com';
+} catch {
+  isUnsplash = false;
+}
+
+const buildUnsplashUrl = (targetWidth: number) => {
+  const url = new URL(source);
+  url.searchParams.set('auto', 'format');
+  url.searchParams.set('fit', 'max');
+  url.searchParams.set('q', '82');
+  url.searchParams.set('w', String(targetWidth));
+  return url.toString();
+};
+
+const candidateWidths = [320, 480, 640, 800, 960, 1200, 1440]
+  .filter((candidate) => candidate < width)
+  .concat(width)
+  .filter((candidate, index, list) => list.indexOf(candidate) === index);
+
+const renderedSrc = isUnsplash ? buildUnsplashUrl(width) : source;
+const srcset = isUnsplash
+  ? candidateWidths.map((candidate) => `${buildUnsplashUrl(candidate)} ${candidate}w`).join(', ')
+  : undefined;
+---
+
+<img
+  src={renderedSrc}
+  srcset={srcset}
+  sizes={srcset ? sizes : undefined}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={priority ? 'eager' : 'lazy'}
+  fetchpriority={priority ? 'high' : undefined}
+  decoding={priority ? 'sync' : 'async'}
+/>

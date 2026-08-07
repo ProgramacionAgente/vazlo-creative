@@ -1,0 +1,44 @@
+{
+  "title": "Nosotros | {{brand}} Digital",
+  "heroTag": "Sobre {{brand}}",
+  "heroHeading": "El equipo detrás de las marcas que dominan su industria",
+  "heroHighlight": "dominan",
+  "heroParagraph": "Somos más que una agencia: somos el socio tecnológico que tu empresa necesita para escalar sin límites en el entorno digital.",
+  "heroCtaPrimary": { "label": "Nuestra Historia", "href": "#historia" },
+  "heroCtaSecondary": { "label": "Ver Servicios", "href": "/#servicios" },
+  "heroImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80",
+  "heroImageAlt": "Equipo {{brand}} Digital",
+  "aboutTag": "Nuestra Esencia",
+  "aboutHeading": "El motor que impulsa tu crecimiento digital",
+  "aboutHighlight": "crecimiento digital",
+  "aboutImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=80",
+  "aboutImageAlt": "Liderazgo {{brand}} Digital",
+  "aboutBadgeValue": "10+ Años",
+  "aboutBadgeLabel": "impulsando marcas digitales",
+  "aboutParagraphs": [
+    "En {{brand}} no fabricamos soluciones genéricas. Cada estrategia nace del análisis profundo de tu negocio, tu competencia y tu cliente ideal. Combinamos datos rigurosos con creatividad desbordante para construir presencias digitales que no solo son vistas, sino recordadas y elegidas.",
+    "Somos un equipo apasionado por los resultados reales. Cada proyecto que aceptamos se convierte en una misión: superar tus expectativas con transparencia, innovación y ejecución impecable."
+  ],
+  "aboutCtaLabel": "Hablemos de tu proyecto",
+  "statsTag": "Quiénes Somos",
+  "statsHeading": "Números que hablan por nosotros",
+  "statsHighlight": "hablan por nosotros",
+  "statsParagraph": "Fundada para llenar el vacío entre la tecnología y los resultados, {{brand}} nació con una misión clara: hacer que el marketing digital funcione de verdad. Sin humo, sin promesas vacías — solo estrategia, ejecución y métricas que importan.",
+  "stats": [
+    { "value": "500+", "label": "Proyectos completados" },
+    { "value": "98%", "label": "Tasa de retención" },
+    { "value": "24/7", "label": "Soporte activo" },
+    { "value": "15", "label": "Países atendidos" }
+  ],
+  "teamTag": "El equipo",
+  "teamHeading": "Conoce a nuestros especialistas",
+  "teamHighlight": "especialistas",
+  "teamQuote": "La excelencia no es un acto, es un hábito.",
+  "teamCtaLabel": "Agenda una sesión",
+  "team": [
+    { "name": "Alex Rivera", "role": "Director Creativo", "img": "https://i.pravatar.cc/300?img=1" },
+    { "name": "Elena Gómez", "role": "Estratega SEO", "img": "https://i.pravatar.cc/300?img=5" },
+    { "name": "Marc Costa", "role": "Lead Developer", "img": "https://i.pravatar.cc/300?img=8" },
+    { "name": "Sofía Méndez", "role": "Growth Manager", "img": "https://i.pravatar.cc/300?img=11" }
+  ]
+}

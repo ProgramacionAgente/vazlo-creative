@@ -1,0 +1,16 @@
+{
+  "name": "NEXUS",
+  "short_name": "NEXUS",
+  "description": "Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03030F",
+  "theme_color": "#00F0FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

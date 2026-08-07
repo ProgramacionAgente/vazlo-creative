@@ -1,0 +1,175 @@
+---
+import '../styles/global.css';
+import '../styles/template-enhancements.css';
+import { colors, fonts, logo } from '../config/theme.mjs';
+import rawSite from '../content/settings/site.json';
+import { resolveContentTokens } from '../lib/content-tokens';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const site = resolveContentTokens(rawSite, { brand: rawSite.brand });
+const { brand, siteUrl, language, ctaLabel, nav, contact, socialLinks, analytics, footerTagline, footerPages, footerLinks, footerBottomLinks, copyright } = site;
+type LinkItem = { label: string; href: string };
+type SocialItem = LinkItem & { icon?: string };
+const configuredSocialLinks = socialLinks as SocialItem[];
+const { title, description = `${brand} — ${footerTagline}`, image = '/placeholders/image-placeholder.svg', type = 'website', noindex = false } = Astro.props;
+const origin = siteUrl.replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname, `${origin}/`).toString();
+const socialImage = new URL(image, `${origin}/`).toString();
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => {
+  if (href === '/') return currentPath === '/';
+  if (href === '/#servicios') return currentPath === '/' || currentPath.startsWith('/servicios/');
+  const hrefPath = href.split('#')[0].replace(/\/$/, '') || '/';
+  return currentPath === hrefPath || currentPath.startsWith(`${hrefPath}/`);
+};
+const usableFooterLinks = (footerLinks as LinkItem[]).filter((item) => item.href && item.href !== '#');
+const usableBottomLinks = (footerBottomLinks as LinkItem[]).filter((item) => item.href && item.href !== '#');
+const phoneHref = `tel:${contact.phone.replace(/[^+\d]/g, '')}`;
+
+const hexToRgb = (hex: string) => {
+  const h = hex.replace('#', '');
+  const n = parseInt(h.length === 3 ? h.split('').map((character) => character + character).join('') : h, 16);
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+};
+const accentRgb = hexToRgb(colors.accent);
+const cssVars: Record<string, string> = {
+  '--bg-void': colors['bg-void'], '--bg-depth': colors['bg-depth'], '--accent': colors.accent,
+  '--accent-2': colors['accent-2'], '--text-primary': colors['text-primary'], '--text-secondary': colors['text-secondary'],
+  '--text-dim': colors['text-dim'], '--grad-indigo': colors['grad-indigo'], '--grad-violet': colors['grad-violet'],
+  '--grad-pink': colors['grad-pink'], '--accent-rgb': accentRgb, '--accent-2-rgb': hexToRgb(colors['accent-2']),
+  '--grad-indigo-rgb': hexToRgb(colors['grad-indigo']), '--grad-violet-rgb': hexToRgb(colors['grad-violet']),
+  '--grad-pink-rgb': hexToRgb(colors['grad-pink']), '--accent-dim': `rgba(${accentRgb}, 0.08)`,
+  '--accent-glow': `0 0 40px rgba(${accentRgb}, 0.30)`, '--accent-glow-strong': `0 0 80px rgba(${accentRgb}, 0.45)`,
+  '--glass-border-accent': `rgba(${accentRgb}, 0.28)`, '--font-display': fonts.display, '--font-body': fonts.body,
+};
+const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}:${value}`).join(';')}}`;
+---
+<!DOCTYPE html>
+<html lang={language}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content={colors['bg-void']} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content={brand} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:alt" content={description} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={socialImage} />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href={fonts.googleHref} rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <style set:html={rootStyle}></style>
+  <script is:inline>document.documentElement.classList.add('js');</script>
+  {analytics.plausibleDomain && <script is:inline defer data-domain={analytics.plausibleDomain} src="https://plausible.io/js/script.js"></script>}
+</head>
+<body class="noise-overlay">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <header id="site-nav" class="site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="nav-inner flex items-center justify-between h-20 transition-all duration-300" id="nav-inner">
+        <a href="/" class="flex items-center gap-2 group" aria-label={`${brand}, ir al inicio`}>
+          {logo.image
+            ? <img src={logo.image} alt={logo.alt} width="32" height="32" class="w-8 h-8 rounded-lg object-cover" />
+            : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span></span>}
+          <span class="font-display font-bold text-lg tracking-tight text-text-primary group-hover:text-accent transition-colors duration-300">{brand}</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+          {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['nav-link text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>)}
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/contacto" class="desktop-cta btn-cyber press"><span class="icon-wrap">{ctaLabel} <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></span></a>
+          <button id="menu-btn" type="button" class="menu-toggle md:hidden glass p-2 rounded-lg" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false"><span class="material-symbols-outlined text-text-primary" aria-hidden="true">menu</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden glass mx-4 mb-4 rounded-2xl overflow-hidden">
+      <nav class="flex flex-col p-4 gap-1" aria-label="Navegación móvil">
+        {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>)}
+        <div class="pt-2 mt-1 border-t border-[rgba(255,255,255,0.07)]"><a href="/contacto" class="btn-cyber-solid w-full justify-center text-center block">{ctaLabel}</a></div>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1"><slot /></main>
+  <footer class="mesh-bg-alt lumen-border mt-0">
+    <div class="max-w-container-max mx-auto px-gutter py-section-py-sm">
+      <div class:list={['grid grid-cols-1 gap-10 mb-16', usableFooterLinks.length ? 'md:grid-cols-4' : 'md:grid-cols-3']}>
+        <div>
+          <a href="/" class="flex items-center gap-2 mb-4">
+            {logo.image ? <img src={logo.image} alt={logo.alt} width="32" height="32" class="w-8 h-8 rounded-lg object-cover" /> : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span></span>}
+            <span class="font-display font-bold text-lg text-text-primary">{brand}</span>
+          </a>
+          <p class="text-text-secondary text-sm leading-relaxed mb-5">{footerTagline}</p>
+          {configuredSocialLinks.length > 0 && <div class="flex flex-wrap gap-3" aria-label="Redes sociales">{configuredSocialLinks.map((item) => <a href={item.href} target="_blank" rel="noopener noreferrer" class="social-link" aria-label={item.label}><span class="material-symbols-outlined text-base" aria-hidden="true">{item.icon || 'link'}</span></a>)}</div>}
+        </div>
+        <div>
+          <p class="tag-cyber mb-5">Contacto</p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-text-secondary text-sm"><span class="material-symbols-outlined text-accent text-base" aria-hidden="true">call</span><a href={phoneHref} class="hover:text-accent transition-colors">{contact.phone}</a></li>
+            <li class="flex items-center gap-3 text-text-secondary text-sm"><span class="material-symbols-outlined text-accent text-base" aria-hidden="true">mail</span><a href={`mailto:${contact.email}`} class="hover:text-accent transition-colors">{contact.email}</a></li>
+            <li class="flex items-center gap-3 text-text-secondary text-sm"><span class="material-symbols-outlined text-accent text-base" aria-hidden="true">location_on</span><span>{contact.location}</span></li>
+          </ul>
+        </div>
+        <div><p class="tag-cyber mb-5">Páginas</p><ul class="space-y-2">{footerPages.map((item) => <li><a href={item.href} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">{item.label}</a></li>)}</ul></div>
+        {usableFooterLinks.length > 0 && <div><p class="tag-cyber mb-5">Enlaces</p><ul class="space-y-2">{usableFooterLinks.map((item) => <li><a href={item.href} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">{item.label}</a></li>)}</ul></div>}
+      </div>
+      <div class="cyber-divider mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-text-dim text-sm">{copyright}</p>{usableBottomLinks.length > 0 && <div class="flex gap-6">{usableBottomLinks.map((item) => <a href={item.href} class="text-text-dim text-sm hover:text-text-secondary transition-colors">{item.label}</a>)}</div>}</div>
+    </div>
+  </footer>
+<script>
+  const nav = document.getElementById('site-nav');
+  const updateNav = () => nav?.classList.toggle('is-scrolled', window.scrollY > 20);
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+  const menuButton = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const setMenuOpen = (open: boolean) => {
+    mobileMenu?.classList.toggle('hidden', !open);
+    menuButton?.setAttribute('aria-expanded', String(open));
+    menuButton?.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    const icon = menuButton?.querySelector('.material-symbols-outlined');
+    if (icon) icon.textContent = open ? 'close' : 'menu';
+  };
+  menuButton?.addEventListener('click', () => setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true'));
+  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') { setMenuOpen(false); menuButton.focus(); } });
+  const animatedElements = document.querySelectorAll('.reveal, .stagger-fade');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
+    animatedElements.forEach((element) => observer.observe(element));
+  } else animatedElements.forEach((element) => element.classList.add('visible'));
+  if (window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches) {
+    document.querySelectorAll('.magnetic').forEach((element) => {
+      element.addEventListener('mousemove', (event) => {
+        const mouseEvent = event as MouseEvent;
+        const rectangle = (element as HTMLElement).getBoundingClientRect();
+        const x = (mouseEvent.clientX - rectangle.left - rectangle.width / 2) * 0.35;
+        const y = (mouseEvent.clientY - rectangle.top - rectangle.height / 2) * 0.35;
+        (element as HTMLElement).style.transform = `translate(${x}px,${y}px)`;
+      });
+      element.addEventListener('mouseleave', () => { (element as HTMLElement).style.transform = ''; });
+    });
+  }
+</script>
+</body>
+</html>

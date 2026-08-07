@@ -1,0 +1,26 @@
+{
+  "name": "cyber-luxe-agency-template",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "cms": "decap-server",
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate:setup": "node scripts/validate-setup.mjs",
+    "check": "astro check && npm run validate:content",
+    "export:html": "npm run build && node scripts/export-html.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "autoprefixer": "^10.5.0",
+    "decap-server": "^3.1.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}
