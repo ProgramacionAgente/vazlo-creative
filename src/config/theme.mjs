@@ -36,8 +36,11 @@ export const fonts = {
 
 // --- Logo. Si `image` tiene una ruta (archivo en /public), se usa la imagen.
 //     Si está vacío, se usa el icono de Material Symbols `icon`.
+//     `wordmark` es el imagotipo horizontal (isotipo + nombre integrado),
+//     usado en el navbar en lugar de isotipo + texto separado.
 export const logo = {
-  image: '/brand/isotipo.png',
-  icon:  'bolt',
-  alt:   'VAZLO CREATIVE',
+  image:    '/brand/isotipo.png',
+  wordmark: '/brand/logo-horizontal.png',
+  icon:     'bolt',
+  alt:      'VAZLO CREATIVE',
 };
