@@ -3,13 +3,13 @@
   "heroTagIcon": "smart_toy",
   "heroHeading": "Escala sin límites con inteligencia artificial autónoma",
   "heroHighlight": "inteligencia artificial",
-  "heroSub": "Escala tu operación sin escalar tu equipo: agentes de IA que cualifican, venden y atienden de forma autónoma 24/7.",
+  "heroSub": "Un agente de IA 24/7 por WhatsApp que atiende, cualifica y da seguimiento a tus clientes sin descanso. Configuración incluida por uno de nuestros ejecutivos.",
   "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
   "imageAlt": "Agentes de IA {{brand}}",
   "features": [
-    { "icon": "schedule", "title": "Disponibilidad 24/7", "desc": "Tu agente de IA nunca duerme — atiende consultas, cualifica leads y cierra citas a cualquier hora." },
-    { "icon": "hub", "title": "Cualificación Masiva", "desc": "Evalúa miles de prospectos simultáneamente con criterios personalizados para tu negocio." },
-    { "icon": "integration_instructions", "title": "Integración CRM", "desc": "Conecta directamente con GoHighLevel, HubSpot o tu CRM actual sin fricciones técnicas." }
+    { "icon": "schedule", "title": "Disponibilidad 24/7", "desc": "Tu agente de IA nunca duerme — atiende consultas y cualifica leads a cualquier hora, todos los días." },
+    { "icon": "chat", "title": "WhatsApp API incluida", "desc": "La integración con WhatsApp API viene incluida en el precio, lista para usarse desde el primer día." },
+    { "icon": "support_agent", "title": "Soporte mes a mes", "desc": "Nuestro equipo te da soporte técnico continuo, incluido en la mensualidad." }
   ],
   "comparisonHeading": "Empleado tradicional vs Agente de IA",
   "comparisonHighlight": "vs",
@@ -24,27 +24,26 @@
   ],
   "comparisonRight": [
     "Activo 24/7 los 365 días",
-    "Atiende miles simultáneamente",
+    "Atiende múltiples conversaciones a la vez",
     "Sin interrupciones",
-    "Inversión única de implantación",
-    "Aprendizaje autónomo continuo"
+    "Configuración única + mensualidad fija",
+    "WhatsApp API incluida en el precio"
   ],
   "plan": {
     "badge": "Plan Único",
-    "price": "$15k",
-    "note": "Implementación completa",
+    "price": "$550 USD + $400 USD/mes",
+    "note": "Configuración única + mensualidad. Requiere cuenta en HighLead o GHL (plataforma no incluida).",
     "features": [
-      "Configuración y entrenamiento del agente",
-      "Integración con tu CRM",
-      "Conexión con bases de datos",
-      "Cualificación automática de leads",
-      "Panel de control y reportes",
-      "Soporte técnico 3 meses"
+      "Configuración del agente por un ejecutivo",
+      "Plataforma donde se instala tu agente IA",
+      "WhatsApp API incluida en el precio",
+      "Soporte técnico mes a mes",
+      "$10 USD de consumo de IA para tus primeros 700-800 mensajes"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },
   "ctaHeading": "¿Te convencemos?",
-  "ctaText": "Agenda una llamada gratuita de 30 minutos y te mostramos un agente de IA en acción.",
+  "ctaText": "Agenda una llamada gratuita y te mostramos un agente de IA en acción. Recuerda: para este servicio se requiere cuenta en HighLead (highlead.us) o GHL (gohighlevel.com), pago de plataforma no incluido.",
   "ctaButtonLabel": "Ver demo en vivo",
   "ctaButtonIcon": "play_circle"
 }

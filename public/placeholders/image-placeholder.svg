@@ -2,11 +2,10 @@
   <title id="title">Imagen de muestra</title>
   <desc id="description">Fondo abstracto degradado para reemplazar por una imagen del proyecto.</desc>
   <defs>
-    <radialGradient id="a" cx="20%" cy="20%" r="80%"><stop stop-color="#4F46E5" stop-opacity=".75"/><stop offset="1" stop-color="#03030F" stop-opacity="0"/></radialGradient>
-    <radialGradient id="b" cx="80%" cy="70%" r="70%"><stop stop-color="#DB2777" stop-opacity=".55"/><stop offset="1" stop-color="#03030F" stop-opacity="0"/></radialGradient>
+    <radialGradient id="a" cx="20%" cy="20%" r="80%"><stop stop-color="#E94F3B" stop-opacity=".18"/><stop offset="1" stop-color="#F7F6F4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b" cx="80%" cy="70%" r="70%"><stop stop-color="#6E8377" stop-opacity=".22"/><stop offset="1" stop-color="#F7F6F4" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1200" height="800" fill="#03030F"/>
+  <rect width="1200" height="800" fill="#F7F6F4"/>
   <rect width="1200" height="800" fill="url(#a)"/>
   <rect width="1200" height="800" fill="url(#b)"/>
-  <path d="M510 250 350 455h105l-28 137 165-226H488z" fill="#00F0FF" opacity=".9"/>
 </svg>

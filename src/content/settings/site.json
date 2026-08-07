@@ -1,6 +1,6 @@
 {
-  "brand": "NEXUS",
-  "siteUrl": "https://example.com",
+  "brand": "VAZLO CREATIVE",
+  "siteUrl": "https://vazlocreative.com",
   "language": "es",
   "ctaLabel": "Contáctanos",
   "nav": [
@@ -10,14 +10,14 @@
     { "label": "Contacto", "href": "/contacto" }
   ],
   "contact": {
-    "phone": "+34 639 494 000",
-    "email": "hola@nexusdigital.io",
-    "location": "Madrid, España",
+    "phone": "+52 55 0000 0000",
+    "email": "hola@vazlocreative.com",
+    "location": "Ciudad de México, México",
     "formEndpoint": ""
   },
   "socialLinks": [],
   "analytics": { "plausibleDomain": "" },
-  "footerTagline": "Soluciones digitales de alto rendimiento para empresas que quieren dominar su mercado.",
+  "footerTagline": "Estudio creativo que convierte ideas en marcas con identidad, estrategia y ejecución impecable.",
   "footerPages": [
     { "label": "Inicio", "href": "/" },
     { "label": "Nosotros", "href": "/nosotros" },
@@ -26,5 +26,5 @@
   ],
   "footerLinks": [],
   "footerBottomLinks": [],
-  "copyright": "© 2026 {{brand}} Digital | Todos los derechos reservados."
+  "copyright": "© 2026 {{brand}}. Todos los derechos reservados."
 }

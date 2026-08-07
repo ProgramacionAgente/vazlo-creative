@@ -1,20 +1,20 @@
 {
-  "title": "Contacto | {{brand}} Digital",
+  "title": "Contacto | {{brand}}",
   "heroTag": "Contacto",
-  "heroHeading": "Construyamos tu próxima historia de éxito digital",
+  "heroHeading": "Construyamos tu próxima historia de éxito",
   "heroHighlight": "historia de éxito",
-  "heroParagraph": "Cuéntanos tu proyecto y en menos de 24 horas un especialista de {{brand}} te contactará con una propuesta estratégica personalizada.",
+  "heroParagraph": "Cuéntanos tu proyecto y en menos de 24 horas un especialista de {{brand}} te contactará con una propuesta personalizada.",
   "heroImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80",
-  "heroImageAlt": "Contacto {{brand}} Digital",
+  "heroImageAlt": "Contacto {{brand}}",
   "formInfoHeading": "Envíanos un mensaje",
   "formInfoText": "Estamos listos para transformar tu visión en una realidad digital impactante. Déjanos tus datos y un especialista se pondrá en contacto contigo en menos de 24 horas.",
   "submitLabel": "SOLICITAR ASESORÍA",
   "serviceOptions": [
+    { "value": "redes", "label": "Redes Sociales" },
+    { "value": "diseno", "label": "Diseño Gráfico" },
     { "value": "web", "label": "Desarrollo Web" },
-    { "value": "estrategia", "label": "Estrategia Digital" },
-    { "value": "seo", "label": "SEO & SEM" },
     { "value": "otro", "label": "Otro" }
   ],
-  "mapHeading": "Visítanos en Madrid, España",
+  "mapHeading": "Visítanos en Ciudad de México, México",
   "mapText": "Disponibles para reuniones presenciales y videollamadas"
 }

@@ -1,38 +1,37 @@
 {
-  "title": "Creadores UGC",
+  "title": "Echo UGC",
   "heroTagIcon": "campaign",
-  "heroHeading": "Contenido auténtico que triplica tus conversiones",
-  "heroHighlight": "triplica",
-  "heroSub": "El contenido generado por personas reales genera 3x más conversiones. Conectamos tu marca con los creadores perfectos para tu audiencia.",
+  "heroHeading": "Videos publicitarios con personas reales que venden",
+  "heroHighlight": "personas reales",
+  "heroSub": "Guion, grabación, edición y campaña de lanzamiento en un solo servicio: contenido auténtico que conecta mejor que un anuncio tradicional.",
   "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
-  "imageAlt": "Creadores UGC {{brand}}",
+  "imageAlt": "Echo UGC {{brand}}",
   "features": [
-    { "icon": "verified_user", "title": "Confianza Auténtica", "desc": "El 94% de los consumidores confía más en UGC que en publicidad tradicional. Dale a tu marca esa credibilidad." },
-    { "icon": "bar_chart", "title": "CTR Aumentado", "desc": "El contenido UGC genera hasta 3x más clics en anuncios pagados que el contenido de marca tradicional." },
-    { "icon": "groups", "title": "Creadores Verificados", "desc": "Red de creadores seleccionados por nicho, audiencia y tasa de engagement para tu industria." }
+    { "icon": "edit_document", "title": "Guion que vende", "desc": "Diseñamos el script del video vendedor pensado para convertir, no solo para entretener." },
+    { "icon": "person", "title": "Persona real", "desc": "Contratamos a la persona que graba tu video: contenido auténtico, no un anuncio con actores de stock." },
+    { "icon": "campaign", "title": "Campaña incluida", "desc": "Un trafficker prepara la propuesta de lanzamiento y monitorea la campaña hasta 30 días." }
   ],
   "stats": [
-    { "value": "94%", "label": "de confianza del consumidor en UGC vs publicidad tradicional" },
-    { "value": "3x", "label": "más CTR en campañas con contenido UGC" }
+    { "value": "94%", "label": "de confianza del consumidor en UGC frente a publicidad tradicional" },
+    { "value": "3x", "label": "más CTR en campañas con contenido generado por personas reales" }
   ],
   "plan": {
-    "badge": "Más Popular",
-    "name": "Plan UGC",
-    "priceLabel": "Precio desde",
-    "price": "$3k",
-    "note": "Por vídeo creado y entregado",
+    "badge": "Servicio único",
+    "name": "Echo UGC",
+    "priceLabel": "Precio",
+    "price": "$330 USD",
+    "note": "Guion: 3 días hábiles · Video: 5-7 días hábiles",
     "features": [
-      "Selección de creador ideal",
-      "Guión y brief de contenido",
-      "1 vídeo UGC editado (30-60s)",
-      "Derechos de uso publicitario",
-      "Variantes para A/B testing",
-      "Estrategia de distribución"
+      "Diseño del script / guion de video vendedor",
+      "Contratación de la persona que graba el video",
+      "1 video con edición",
+      "Propuesta de campaña para el lanzamiento",
+      "1 trafficker: lanzamiento y monitoreo hasta 30 días"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },
   "ctaHeading": "¿Te convencemos?",
-  "ctaText": "Agenda una llamada gratuita de 30 minutos y encontramos juntos el creador perfecto para tu marca.",
+  "ctaText": "Agenda una llamada gratuita de 30 minutos y armamos juntos el guion de tu próximo video vendedor.",
   "ctaButtonLabel": "Hablar con un experto",
   "ctaButtonIcon": "phone_in_talk"
 }

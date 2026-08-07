@@ -4,22 +4,24 @@
   "icon": "diversity_3",
   "heroHeading": "Redes sociales que venden y fidelizan tu comunidad",
   "heroHighlight": "venden",
-  "heroSub": "Convertimos tu presencia en redes en un motor de ventas y fidelización con estrategia, contenido de calidad y gestión experta.",
+  "heroSub": "Un community manager y un trafficker dedicados a tu marca: parrilla de contenidos, diseños, publicaciones y campañas que convierten tus redes en un canal real de ventas.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
   "imageAlt": "Gestión de Redes Sociales {{brand}}",
   "features": [
-    { "icon": "calendar_month", "title": "Planificación editorial", "desc": "Estrategia de contenido mensual alineada con tus objetivos de negocio y el calendario de tu industria." },
-    { "icon": "bar_chart", "title": "Análisis y reportes", "desc": "Métricas semanales y mensuales con insights accionables para mejorar continuamente el rendimiento." },
-    { "icon": "forum", "title": "Community management", "desc": "Gestión activa de comentarios, mensajes y conversaciones para construir una comunidad fiel a tu marca." }
+    { "icon": "calendar_month", "title": "15 diseños al mes por red", "desc": "Parrilla de contenidos con copies, diseños y publicaciones. Hasta 6 pueden ser videos (8 si es TikTok)." },
+    { "icon": "campaign", "title": "Trafficker incluido", "desc": "Dos propuestas de campaña de inversión publicitaria y un reporte mensual de crecimiento." },
+    { "icon": "forum", "title": "Community management", "desc": "Respuesta a mensajes y comentarios de 9:00 a 17:00, GMT-6 Centro CDMX." }
   ],
   "plans": [
-    { "name": "Básico", "sub": "2 redes sociales", "price": "$1.8k/mes", "featured": false, "features": ["12 posts/mes", "2 redes incluidas", "Diseño de piezas", "Reporte mensual", "Respuesta de comentarios"] },
-    { "name": "Growth", "sub": "4 redes sociales", "price": "$3.2k/mes", "featured": true, "features": ["24 posts/mes", "4 redes incluidas", "Stories diarias", "Reels/TikToks (4/mes)", "Community 5d/sem", "Reporte semanal"] },
-    { "name": "Premium", "sub": "Ecosistema total", "price": "$5.5k/mes", "featured": false, "features": ["Posts ilimitados", "Todas las redes", "Reels diarios", "Stories diarias", "Community 7d/sem", "Estrategia mensual", "Ads incluidos"] }
+    { "name": "Break Shot", "sub": "1 red social", "price": "$400 USD/mes", "featured": false, "features": ["15 diseños al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $4,000 USD (2 meses gratis)"] },
+    { "name": "Double Rall", "sub": "2 redes sociales", "price": "$750 USD/mes", "featured": false, "features": ["15 diseños por red al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $7,500 USD (2 meses gratis)"] },
+    { "name": "Corner Pocket", "sub": "3 redes sociales", "price": "$1,100 USD/mes", "featured": true, "features": ["15 diseños por red al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $11,000 USD (2 meses gratis)"] },
+    { "name": "Precision Cue", "sub": "4 redes sociales", "price": "$1,500 USD/mes", "featured": false, "features": ["15 diseños por red al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $15,000 USD (2 meses gratis)"] },
+    { "name": "Nine Ball", "sub": "6 redes sociales", "price": "$2,200 USD/mes", "featured": false, "features": ["15 diseños por red al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $22,000 USD (2 meses gratis)"] }
   ],
   "ctaHeading": "¿Tus redes necesitan más impacto?",
-  "ctaText": "Diseñamos una estrategia personalizada para convertir tu comunidad en clientes reales.",
-  "ctaButtonLabel": "Solicitar estrategia gratuita",
+  "ctaText": "Cuéntanos qué redes quieres activar y armamos tu plan: mismo día de contratación se asigna tu community manager y tu especialista en campañas.",
+  "ctaButtonLabel": "Solicitar estrategia",
   "ctaButtonIcon": "phone_in_talk"
 }

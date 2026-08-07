@@ -4,22 +4,23 @@
   "icon": "palette",
   "heroHeading": "Identidades visuales que enamoran y convierten",
   "heroHighlight": "enamoran",
-  "heroSub": "Creamos sistemas visuales premium que comunican el alma de tu marca y generan reconocimiento inmediato en cualquier punto de contacto.",
+  "heroSub": "Diseñamos tu identidad de marca completa —de la propuesta de logotipo al manual de identidad corporativa— y las piezas gráficas que la mantienen viva en cada punto de contacto.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
   "imageAlt": "Diseño Gráfico {{brand}}",
   "features": [
-    { "icon": "brand_awareness", "title": "Identidad de marca", "desc": "Logotipo, paleta, tipografías y sistema visual coherente que comunica autoridad desde el primer vistazo." },
-    { "icon": "image", "title": "Materiales digitales", "desc": "Posts, stories, banners, presentaciones y todo el ecosistema visual que tu marca necesita en digital." },
-    { "icon": "print", "title": "Diseño impreso", "desc": "Tarjetas, folletos, catálogos y señalética con la misma calidad premium de tu identidad digital." }
+    { "icon": "brand_awareness", "title": "Identity: tu marca desde cero", "desc": "3 propuestas de logotipo en PDF, 1 ronda de cambios y, al autorizar, tu manual de identidad corporativa completo." },
+    { "icon": "image", "title": "Piezas gráficas listas para usar", "desc": "Racks, menús y catálogos adaptados a tu identidad de marca, con formato listo para imprenta o digital." },
+    { "icon": "sell", "title": "Naming y extras", "desc": "¿Aún no tienes nombre de marca? También ofrecemos naming, páginas de catálogo y packs de stickers." }
   ],
   "plans": [
-    { "name": "Brand Kit", "sub": "Identidad básica", "price": "$3.5k–$6k", "featured": false, "features": ["Logo + variantes", "Paleta de colores", "Tipografías", "Manual de marca", "Formatos web y print"] },
-    { "name": "Brand Pro", "sub": "Sistema completo", "price": "$7k–$12k", "featured": true, "features": ["Todo de Brand Kit", "20 piezas digitales", "Templates editables", "Guía de voz y tono", "Revisiones ilimitadas"] },
-    { "name": "Brand Full", "sub": "Ecosistema total", "price": "$14k–$22k", "featured": false, "features": ["Todo de Brand Pro", "Pack de redes 3 meses", "Diseño web aplicado", "Video intro/logo", "Soporte mensual"] }
+    { "name": "Identity", "sub": "Identidad de marca completa", "price": "$599 USD", "featured": true, "features": ["Etapa 1: 3 propuestas de logotipo en PDF (5-7 días hábiles)", "1 ronda de cambios sobre la propuesta elegida", "Etapa 2: manual de identidad corporativa (3 días hábiles)", "Logotipo en formato editable, JPG y PNG", "Tipografías de marca"] },
+    { "name": "Rack Empresarial", "sub": "Menú o catálogo físico", "price": "$349 USD", "featured": false, "features": ["Diseño de rack o menú empresarial", "Adaptado a tu identidad de marca", "Entrega en 7 días hábiles", "Formato listo para imprenta"] },
+    { "name": "Rack Pyme", "sub": "Menú o catálogo para negocio pequeño", "price": "$179 USD", "featured": false, "features": ["Diseño de rack o menú para Pyme", "Adaptado a tu identidad de marca", "Entrega en 7 días hábiles", "Formato listo para imprenta"] },
+    { "name": "CueCase", "sub": "Pieza gráfica individual", "price": "$149 USD", "featured": false, "features": ["Diseño de pieza gráfica a medida", "Entrega en 5 días hábiles", "1 ronda de revisión", "Formato digital"] }
   ],
   "ctaHeading": "¿Tu marca merece mejor imagen?",
-  "ctaText": "Cuéntanos tu visión y te mostramos cómo transformarla en un sistema visual que impacte.",
+  "ctaText": "Cuéntanos tu visión y te mostramos cómo transformarla en una identidad completa. También manejamos naming ($99 USD), páginas de catálogo ($39 USD) y packs de 5 stickers básicos ($29 USD) por separado.",
   "ctaButtonLabel": "Solicitar propuesta",
   "ctaButtonIcon": "phone_in_talk"
 }

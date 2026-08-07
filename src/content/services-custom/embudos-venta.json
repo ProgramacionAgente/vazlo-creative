@@ -3,33 +3,31 @@
   "heroTagIcon": "filter_alt",
   "heroHeading": "Sistemas de conversión que trabajan solos mientras tú descansas",
   "heroHighlight": "trabajan solos",
-  "heroSub": "Diseña el viaje perfecto de tu cliente: desde el primer contacto hasta la venta, todo automatizado y optimizado para convertir.",
+  "heroSub": "Embudo con filtro API de Facebook: landing page, automatización, calendario de citas y emails de entrega de clientes, configurados y funcionando.",
   "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80",
   "imageAlt": "Embudos de Venta {{brand}}",
   "features": [
-    { "icon": "web", "title": "Landing Diseñada", "desc": "Página de aterrizaje de alta conversión con copywriting persuasivo y diseño orientado a la acción." },
-    { "icon": "automation", "title": "Automatización Completa", "desc": "Secuencias de email, WhatsApp y SMS que nutren al prospecto automáticamente hasta la compra." },
-    { "icon": "calendar_month", "title": "Seguimiento Inteligente", "desc": "Calendario integrado, recordatorios automáticos y pipeline de ventas en tiempo real." }
+    { "icon": "web", "title": "Landing diseñada", "desc": "Página de aterrizaje diseñada para tu embudo, lista para recibir tráfico de campañas." },
+    { "icon": "automation", "title": "Automatización completa", "desc": "Configuración y automatización del embudo, con formulario y filtro conectado a la API de Facebook." },
+    { "icon": "calendar_month", "title": "Calendario de citas", "desc": "Calendario de citas integrado y 3 emails de entrega de clientes listos para usarse." }
   ],
   "plan": {
-    "badge": "Más Popular",
-    "name": "Plan Único",
-    "price": "$3.9k",
-    "note": "Implementación completa del sistema",
+    "badge": "Plan Único",
+    "name": "Embudo con filtro API de Facebook",
+    "price": "$500 USD",
+    "note": "Pago único por dejar el embudo configurado y funcionando. Requiere cuenta en HighLead o GHL (plataforma no incluida).",
     "features": [
-      "Diseño landing page de alta conversión",
-      "Configuración GoHighLevel completa",
-      "Integración calendario de citas",
-      "Secuencias de email automatizadas",
-      "Integración formularios y CRM",
-      "Integración Meta Ads y Google Ads",
-      "Dashboard de métricas en tiempo real",
-      "Soporte técnico 60 días"
+      "Diseño de landing page",
+      "Configuración y automatización del embudo",
+      "Calendario de citas integrado",
+      "Diseño de 3 emails de entrega de clientes",
+      "Diseño de formulario y configuración de API de Facebook",
+      "Especialista en campañas para el lanzamiento (inversión no incluida)"
     ],
     "buttonLabel": "CONTRATAR AHORA"
   },
   "ctaHeading": "¿Te convencemos?",
-  "ctaText": "Agenda una sesión gratuita de 30 minutos y te mostramos cómo un embudo automatizado puede transformar tu negocio.",
+  "ctaText": "Agenda una sesión gratuita de 30 minutos y te mostramos cómo dejar tu embudo funcionando en días, no semanas.",
   "ctaButtonLabel": "Ver demo en vivo",
   "ctaButtonIcon": "play_circle"
 }

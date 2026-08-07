@@ -29,7 +29,7 @@ const about = resolveContentTokens(rawAbout, { brand: site.brand });
         </div>
         <div class="reveal">
           <div class="glass card-cyber rounded-2xl overflow-hidden animate-float">
-            <ResponsiveImage src={about.heroImage} alt={about.heroImageAlt} width={800} height={600} sizes="(min-width: 768px) 50vw, 100vw" class="w-full aspect-[4/3] object-cover opacity-85" priority />
+            <ResponsiveImage src={about.heroImage} alt={about.heroImageAlt} width={800} height={600} sizes="(min-width: 768px) 50vw, 100vw" class="w-full aspect-[4/3] object-cover" priority />
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ const about = resolveContentTokens(rawAbout, { brand: site.brand });
         <div class="md:col-span-5 reveal">
           <div class="relative">
             <div class="glass card-cyber rounded-2xl overflow-hidden">
-              <ResponsiveImage src={about.aboutImage} alt={about.aboutImageAlt} width={640} height={640} sizes="(min-width: 768px) 42vw, 100vw" class="w-full aspect-square object-cover opacity-80" />
+              <ResponsiveImage src={about.aboutImage} alt={about.aboutImageAlt} width={640} height={640} sizes="(min-width: 768px) 42vw, 100vw" class="w-full aspect-square object-cover" />
             </div>
             <div class="absolute -bottom-4 -right-4 glass rounded-xl px-5 py-3 border border-accent/30">
               <p class="text-accent font-display font-bold text-sm">{about.aboutBadgeValue}</p>

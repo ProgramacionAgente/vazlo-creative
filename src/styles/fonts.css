@@ -1,0 +1,13 @@
+/* Gilmour Bold — display, auto-hospedada.
+   El archivo es TrueType-flavoured (magic 0x00010000) pese a la extensión .otf.
+   Peso único, sin cursiva: se declara como rango 400-900 para que el
+   navegador nunca sintetice negritas/oblicuas falsas (ver font-synthesis:none
+   en global.css). Licencia: https://umitype.com/license/ — verificar uso web
+   con el cliente antes de publicar. */
+@font-face {
+  font-family: 'Gilmour';
+  src: url('/fonts/gilmour-bold.otf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}

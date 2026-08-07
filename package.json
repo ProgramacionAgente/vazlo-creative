@@ -1,5 +1,5 @@
 {
-  "name": "cyber-luxe-agency-template",
+  "name": "vazlo-creative-web",
   "type": "module",
   "version": "1.0.0",
   "scripts": {
@@ -7,6 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "cms": "decap-server",
+    "brand:assets": "node scripts/build-brand-assets.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "validate:setup": "node scripts/validate-setup.mjs",
     "check": "astro check && npm run validate:content",

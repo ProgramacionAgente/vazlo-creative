@@ -1,14 +1,14 @@
-# AGENTS — Cyber-Luxe Agency Template
+# AGENTS — VAZLO CREATIVE
 
 ## Proyecto
 
-Plantilla estática de agencia con Astro 5, Tailwind CSS 3, Decap CMS y despliegue en Cloudflare Pages.
+Sitio estático de estudio creativo con Astro 5, Tailwind CSS 3, Decap CMS y despliegue en Cloudflare Pages.
 
 ## Convenciones obligatorias
 
 - `src/` es la única fuente editable. `html/` se regenera con `npm run export:html`; no se edita manualmente.
 - Mantén Astro en la versión mayor 5 y Tailwind en la versión mayor 3 salvo migración explícita.
-- Usa Sora para display/titulares y Mulish para cuerpo.
+- Usa Gilmour para display/titulares (auto-hospedada, `public/fonts/gilmour-bold.otf`, declarada en `src/styles/fonts.css`) y Poppins para cuerpo (Google Fonts).
 - Empareja siempre `backdrop-filter` con `-webkit-backdrop-filter`.
 - Colores, fuentes y logo viven en `src/config/theme.mjs` y se reflejan en `tailwind.config.mjs`.
 - Datos de sitio y marca viven en `src/content/settings/site.json`.
@@ -22,6 +22,7 @@ Plantilla estática de agencia con Astro 5, Tailwind CSS 3, Decap CMS y desplieg
 | Comando | Acción |
 |---|---|
 | `npm run dev` | Servidor local |
+| `npm run brand:assets` | Regenera `public/brand/` desde los logos fuente (solo tras actualizar el logo) |
 | `npm run cms` | CMS local |
 | `npm run check` | Tipos y contenido |
 | `npm run validate:setup` | Placeholders de entrega |

@@ -1,6 +1,6 @@
-# Cyber-Luxe Agency Template
+# VAZLO CREATIVE
 
-Plantilla reutilizable para agencias digitales, construida con Astro 5 y Tailwind CSS 3. Incluye 11 páginas públicas, CMS con Decap, SEO técnico, formulario configurable, accesibilidad, CI y exportación HTML autónoma.
+Sitio del estudio creativo VAZLO CREATIVE, construido con Astro 5 y Tailwind CSS 3. Incluye 11 páginas públicas, CMS con Decap, SEO técnico, formulario configurable, accesibilidad, CI y exportación HTML autónoma.
 
 ## Comandos
 
@@ -20,6 +20,8 @@ npm run preview
 La configuración está separada por responsabilidad:
 
 - `src/config/theme.mjs`: colores, tipografías y logo.
+- `src/styles/fonts.css`: `@font-face` de Gilmour (auto-hospedada en `public/fonts/`).
+- `scripts/build-brand-assets.mjs` (`npm run brand:assets`): genera `public/brand/` (isotipo, favicons, iconos PWA, OG) desde los logos fuente.
 - `src/content/settings/site.json`: marca, dominio, navegación, contacto, formulario, redes, analítica y footer.
 - `src/content/pages/*.json`: Inicio, Nosotros y Contacto.
 - `src/content/services/*.json`: servicios con layout uniforme.

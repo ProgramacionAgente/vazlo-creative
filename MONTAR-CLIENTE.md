@@ -1,5 +1,23 @@
 # Montar un sitio de cliente
 
+## Pendientes específicos de VAZLO CREATIVE
+
+Antes de publicar, resolver:
+
+- **Datos de contacto** (`src/content/settings/site.json:contact`): teléfono, email y ubicación son placeholders. Confirmar con el cliente.
+- **`siteUrl`**: `https://vazlocreative.com` es provisional; confirmar el dominio real.
+- **Licencia de Gilmour Bold**: la fuente (`public/uploads/Gilmour Bold.otf`, Umitype, "All Rights Reserved", licencia en `https://umitype.com/license/`) se auto-hospeda en `public/fonts/gilmour-bold.otf`. Verificar con el cliente que la licencia permite uso web antes de publicar.
+- **`public/admin/config.yml`**: sigue con `TU-USUARIO/TU-REPO` y `TU-SUBDOMINIO`. Necesita el slug real de GitHub y el subdominio del Worker OAuth desplegado (`oauth-worker/`).
+- **`Catálogo VAZLO CREATIVE 2026.pdf`** (14 MB) vive en `public/uploads/`, así que se despliega públicamente. Si no debe ser descargable, sacarlo de `public/` antes de publicar.
+
+### Precios por verificar
+
+Los precios y planes de servicios (`src/content/services/*.json`, `src/content/services-custom/*.json`) se extrajeron del catálogo PDF, cuyo texto no sigue un orden lineal legible. La mayoría de emparejamientos se verificaron por consistencia interna (p. ej. redes sociales: el precio anual es siempre 10× el mensual en los 5 planes, lo que confirma el orden asignado). Aun así, revisar con el cliente antes de publicar:
+
+- **Diseño gráfico**: el emparejamiento entre Rack Empresarial / Rack Pyme / CueCase y sus tiempos de entrega (7, 7, 5 días) viene de un bloque de texto desordenado en el PDF.
+- **Desarrollo web**: en cada par económico/a la medida (Landing, Web informativo, E-commerce WhatsApp, E-commerce con pasarela), se asumió que el precio menor es "económico" — consistente en las 9 filas del catálogo, pero no confirmado nombre por nombre.
+- **Video marketing**: solo se publicaron los tres niveles (Straig/Spin/Trick) por duración y las suscripciones semanales, que son los datos claramente legibles. El bloque "otros servicios de video" (animación de logotipo, creación de imagen, cambios de medida) no se incluyó por ambigüedad de precios.
+
 ## 1. Crear el proyecto
 
 1. Crea un repositorio desde esta plantilla.

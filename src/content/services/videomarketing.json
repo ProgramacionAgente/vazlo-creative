@@ -1,25 +1,26 @@
 {
-  "title": "Videomarketing",
+  "title": "Video Marketing",
   "order": 6,
   "icon": "movie",
   "heroHeading": "Vídeos que amplifican tu mensaje y disparan el engagement",
   "heroHighlight": "amplifican",
-  "heroSub": "Producimos piezas audiovisuales estratégicas que conectan emocionalmente con tu audiencia y aceleran el proceso de compra.",
+  "heroSub": "Reels, TikToks, YouTube y piezas para campañas en tres niveles de producción: básico, inter y completo. Elige por duración o contrata la suscripción semanal.",
   "heroCtaLabel": "Solicitar servicio",
   "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80",
-  "imageAlt": "Videomarketing {{brand}}",
+  "imageAlt": "Video Marketing {{brand}}",
   "features": [
-    { "icon": "videocam", "title": "Producción profesional", "desc": "Rodaje, dirección y edición de alto nivel para piezas que comunican tu mensaje con impacto real." },
-    { "icon": "trending_up", "title": "Vídeos que convierten", "desc": "Guiones estratégicos orientados a ventas: testimoniales, explicativos, ads y contenido para redes." },
-    { "icon": "subtitles", "title": "Subtítulos y adaptación", "desc": "Versiones optimizadas para cada plataforma: 9:16, 1:1, 16:9 con subtítulos y colores de marca." }
+    { "icon": "videocam", "title": "Tres niveles de producción", "desc": "Básico con transiciones simples, Inter con mockups, Completo con mockups y animaciones." },
+    { "icon": "subtitles", "title": "Todos los formatos", "desc": "Stories, reels, videos para YouTube, redes sociales y campañas, en cualquier duración." },
+    { "icon": "record_voice_over", "title": "Narración de voz", "desc": "Guion y voz en off disponibles como servicio adicional para darle vida a tu proyecto." }
   ],
   "plans": [
-    { "name": "Starter", "sub": "1 vídeo/mes", "price": "$2.2k/mes", "featured": false, "features": ["1 vídeo profesional", "Hasta 2 min", "Guión incluido", "Música con licencia", "3 revisiones"] },
-    { "name": "Creator", "sub": "4 vídeos/mes", "price": "$5.8k/mes", "featured": true, "features": ["4 vídeos/mes", "Todos los formatos", "Reels/Shorts incluidos", "Guiones + edición", "Revisiones ilimitadas", "Entrega en 5d"] },
-    { "name": "Studio", "sub": "Producción total", "price": "$12k+/mes", "featured": false, "features": ["Vídeos ilimitados", "Equipo dedicado", "Animaciones 2D/3D", "Publicación en canales", "Dirección creativa", "Estrategia mensual"] }
+    { "name": "Video Básico", "sub": "Transiciones simples + textos 2D", "price": "$70 USD", "featured": false, "features": ["Duración de 30 segundos", "Menos de 30s: $40 USD", "60 segundos: $100 USD", "Narración de voz: contratación aparte", "Formatos: reels, stories, TikTok, YouTube"] },
+    { "name": "Video Inter", "sub": "+ mockups", "price": "$130 USD", "featured": true, "features": ["Duración de 30 segundos", "Menos de 30s: $75 USD", "60 segundos: $200 USD", "Narración de voz: contratación aparte", "Formatos: reels, stories, TikTok, YouTube"] },
+    { "name": "Video Completo", "sub": "+ mockups y animaciones", "price": "$270 USD", "featured": false, "features": ["Duración de 30 segundos", "Menos de 30s: $100 USD", "60 segundos: $500 USD", "Narración de voz: contratación aparte", "Formatos: reels, stories, TikTok, YouTube"] },
+    { "name": "Suscripción semanal", "sub": "4 videos de 30s al mes", "price": "desde $200 USD/mes", "featured": false, "features": ["1 video semanal de 30 segundos", "Weekly Basic: $200 USD/mes", "Weekly Inter: $400 USD/mes", "Weekly Advance: $800 USD/mes", "Ideal para un calendario de contenido constante"] }
   ],
   "ctaHeading": "¿Listo para crear contenido que impacte?",
-  "ctaText": "Hablemos sobre tu visión y te preparamos una propuesta de producción a medida.",
+  "ctaText": "Cuéntanos qué tipo de video necesitas y te preparamos una propuesta con tiempos de entrega claros.",
   "ctaButtonLabel": "Solicitar propuesta",
   "ctaButtonIcon": "video_call"
 }
