@@ -97,7 +97,7 @@ const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}
       <div class="nav-inner flex items-center justify-between h-20 transition-all duration-300" id="nav-inner">
         <a href="/" class="flex items-center group" aria-label={`${brand}, ir al inicio`}>
           {logo.wordmark
-            ? <img src={logo.wordmark} alt={logo.alt} width="160" height="80" class="h-9 w-auto object-contain" />
+            ? <img src={logo.wordmark} alt={logo.alt} width="200" height="100" class="h-14 w-auto object-contain" />
             : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span></span>}
         </a>
         <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
