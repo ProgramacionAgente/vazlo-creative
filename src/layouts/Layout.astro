@@ -4,6 +4,7 @@ import '../styles/global.css';
 import '../styles/template-enhancements.css';
 import { colors, fonts, logo } from '../config/theme.mjs';
 import rawSite from '../content/settings/site.json';
+import rawHome from '../content/pages/home.json';
 import { resolveContentTokens } from '../lib/content-tokens';
 
 interface Props {
@@ -30,6 +31,7 @@ const isActive = (href: string) => {
   const hrefPath = href.split('#')[0].replace(/\/$/, '') || '/';
   return currentPath === hrefPath || currentPath.startsWith(`${hrefPath}/`);
 };
+const serviceLinks = rawHome.services as { icon: string; title: string; href: string }[];
 const usableFooterLinks = (footerLinks as LinkItem[]).filter((item) => item.href && item.href !== '#');
 const usableBottomLinks = (footerBottomLinks as LinkItem[]).filter((item) => item.href && item.href !== '#');
 const phoneHref = `tel:${contact.phone.replace(/[^+\d]/g, '')}`;
@@ -101,7 +103,25 @@ const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}
             : <span class="inline-flex w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-2 items-center justify-center" aria-hidden="true"><span class="material-symbols-outlined text-bg-void text-base" style="font-variation-settings:'wght' 700;">{logo.icon}</span></span>}
         </a>
         <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-          {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['nav-link text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>)}
+          {nav.map((item) => item.href === '/#servicios' ? (
+            <div class="relative" id="services-nav-item">
+              <button type="button" id="services-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="services-dropdown" class:list={['nav-link text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest inline-flex items-center gap-1', { 'nav-link-active': isActive(item.href) }]}>
+                {item.label}
+                <span id="services-trigger-icon" class="material-symbols-outlined text-base transition-transform duration-200" aria-hidden="true">expand_more</span>
+              </button>
+              <div id="services-dropdown" role="menu" aria-label="Servicios" class="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-72 opacity-0 invisible -translate-y-1 pointer-events-none transition-all duration-200">
+                <div class="glass rounded-2xl overflow-hidden p-2">
+                  {serviceLinks.map((s) => (
+                    <a href={s.href} role="menuitem" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-text-secondary hover:text-text-primary hover:bg-white/5 transition-colors duration-150">
+                      <span class="material-symbols-outlined text-accent text-lg" aria-hidden="true">{s.icon}</span>{s.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['nav-link text-label-sm text-text-secondary hover:text-text-primary transition-colors duration-200 uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>
+          ))}
         </nav>
         <div class="flex items-center gap-4">
           <a href="/contacto" class="desktop-cta btn-cyber press"><span class="icon-wrap">{ctaLabel} <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span></span></a>
@@ -111,7 +131,23 @@ const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}
     </div>
     <div id="mobile-menu" class="hidden md:hidden glass mx-4 mb-4 rounded-2xl overflow-hidden">
       <nav class="flex flex-col p-4 gap-1" aria-label="Navegación móvil">
-        {nav.map((item) => <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>)}
+        {nav.map((item) => item.href === '/#servicios' ? (
+          <div>
+            <button type="button" id="mobile-services-trigger" aria-expanded="false" aria-controls="mobile-services-panel" class:list={['w-full flex items-center justify-between px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>
+              {item.label}
+              <span id="mobile-services-icon" class="material-symbols-outlined text-base transition-transform duration-200" aria-hidden="true">expand_more</span>
+            </button>
+            <div id="mobile-services-panel" class="hidden ml-4 pl-4 border-l border-[rgba(60,60,59,0.12)] mb-1">
+              {serviceLinks.map((s) => (
+                <a href={s.href} class="flex items-center gap-2 px-4 py-2.5 text-text-secondary hover:text-accent rounded-lg transition-all text-sm">
+                  <span class="material-symbols-outlined text-accent text-base" aria-hidden="true">{s.icon}</span>{s.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined} class:list={['px-4 py-3 text-text-secondary hover:text-accent rounded-lg transition-all text-sm font-display font-semibold uppercase tracking-widest', { 'nav-link-active': isActive(item.href) }]}>{item.label}</a>
+        ))}
         <div class="pt-2 mt-1 border-t border-[rgba(60,60,59,0.12)]"><a href="/contacto" class="btn-cyber-solid w-full justify-center text-center block">{ctaLabel}</a></div>
       </nav>
     </div>
@@ -160,6 +196,48 @@ const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}
   menuButton?.addEventListener('click', () => setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true'));
   mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') { setMenuOpen(false); menuButton.focus(); } });
+
+  // Desktop "Servicios" dropdown
+  const servicesItem = document.getElementById('services-nav-item');
+  const servicesTrigger = document.getElementById('services-trigger');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const servicesIcon = document.getElementById('services-trigger-icon');
+  let servicesCloseTimeout: ReturnType<typeof setTimeout> | null = null;
+  const setServicesOpen = (open: boolean) => {
+    if (!servicesTrigger || !servicesDropdown) return;
+    servicesTrigger.setAttribute('aria-expanded', String(open));
+    servicesDropdown.classList.toggle('opacity-0', !open);
+    servicesDropdown.classList.toggle('invisible', !open);
+    servicesDropdown.classList.toggle('pointer-events-none', !open);
+    servicesDropdown.classList.toggle('-translate-y-1', !open);
+    servicesIcon?.classList.toggle('rotate-180', open);
+  };
+  const clearServicesCloseTimeout = () => {
+    if (servicesCloseTimeout) { clearTimeout(servicesCloseTimeout); servicesCloseTimeout = null; }
+  };
+  servicesItem?.addEventListener('mouseenter', () => { clearServicesCloseTimeout(); setServicesOpen(true); });
+  servicesItem?.addEventListener('mouseleave', () => { servicesCloseTimeout = setTimeout(() => setServicesOpen(false), 150); });
+  servicesTrigger?.addEventListener('click', () => setServicesOpen(servicesTrigger.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('click', (event) => {
+    if (servicesItem && !servicesItem.contains(event.target as Node)) setServicesOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && servicesTrigger?.getAttribute('aria-expanded') === 'true') {
+      setServicesOpen(false);
+      servicesTrigger.focus();
+    }
+  });
+
+  // Mobile "Servicios" accordion
+  const mobileServicesTrigger = document.getElementById('mobile-services-trigger');
+  const mobileServicesPanel = document.getElementById('mobile-services-panel');
+  const mobileServicesIcon = document.getElementById('mobile-services-icon');
+  mobileServicesTrigger?.addEventListener('click', () => {
+    const open = mobileServicesTrigger.getAttribute('aria-expanded') === 'true';
+    mobileServicesTrigger.setAttribute('aria-expanded', String(!open));
+    mobileServicesPanel?.classList.toggle('hidden', open);
+    mobileServicesIcon?.classList.toggle('rotate-180', !open);
+  });
   const animatedElements = document.querySelectorAll('.reveal, .stagger-fade');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.12 });

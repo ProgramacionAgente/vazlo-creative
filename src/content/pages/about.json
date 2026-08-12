@@ -7,7 +7,7 @@
   "heroCtaPrimary": { "label": "Nuestra Historia", "href": "#historia" },
   "heroCtaSecondary": { "label": "Ver Servicios", "href": "/#servicios" },
   "heroImage": "/images/nosotros/hero.jpg",
-  "heroImageAlt": "Equipo {{brand}} trabajando en estrategia de marca",
+  "heroImageAlt": "Equipo {{brand}} en sesión de planeación estratégica",
   "aboutTag": "Nuestra Esencia",
   "aboutHeading": "El motor que impulsa el crecimiento de tu marca",
   "aboutHighlight": "crecimiento de tu marca",
@@ -25,20 +25,20 @@
   "statsHighlight": "hablan por nosotros",
   "statsParagraph": "Fundada para llenar el vacío entre la identidad de marca y los resultados, {{brand}} nació con una misión clara: hacer que el marketing funcione de verdad. Sin humo, sin promesas vacías — solo estrategia, ejecución y métricas que importan.",
   "stats": [
-    { "value": "500+", "label": "Proyectos completados" },
-    { "value": "98%", "label": "Tasa de retención" },
+    { "value": "100%", "label": "Estrategias a la medida, sin plantillas genéricas" },
+    { "value": "1:1", "label": "Trato directo con tu equipo asignado" },
     { "value": "24/7", "label": "Soporte activo" },
-    { "value": "15", "label": "Países atendidos" }
+    { "value": "CDMX", "label": "Sede en Ciudad de México, clientes en todo el país" }
   ],
   "teamTag": "El equipo",
-  "teamHeading": "Conoce a nuestros especialistas",
-  "teamHighlight": "especialistas",
+  "teamHeading": "Las disciplinas detrás de cada proyecto",
+  "teamHighlight": "cada proyecto",
   "teamQuote": "La excelencia no es un acto, es un hábito.",
   "teamCtaLabel": "Agenda una sesión",
   "team": [
-    { "name": "Alex Rivera", "role": "Director Creativo", "img": "https://i.pravatar.cc/300?img=1" },
-    { "name": "Elena Gómez", "role": "Estratega SEO", "img": "https://i.pravatar.cc/300?img=5" },
-    { "name": "Marc Costa", "role": "Lead Developer", "img": "https://i.pravatar.cc/300?img=8" },
-    { "name": "Sofía Méndez", "role": "Growth Manager", "img": "https://i.pravatar.cc/300?img=11" }
+    { "name": "Dirección Creativa", "role": "Estrategia de marca y diseño", "img": "https://i.pravatar.cc/300?img=1" },
+    { "name": "Estrategia SEO", "role": "Posicionamiento y contenido orgánico", "img": "https://i.pravatar.cc/300?img=5" },
+    { "name": "Desarrollo Web", "role": "Arquitectura y despliegue de producto", "img": "https://i.pravatar.cc/300?img=8" },
+    { "name": "Growth & Ads", "role": "Adquisición y escalamiento de campañas", "img": "https://i.pravatar.cc/300?img=11" }
   ]
 }

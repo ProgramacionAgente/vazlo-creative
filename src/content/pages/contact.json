@@ -7,7 +7,7 @@
   "heroImage": "/images/home/hero.jpg",
   "heroImageAlt": "Contacto {{brand}}",
   "formInfoHeading": "Envíanos un mensaje",
-  "formInfoText": "Estamos listos para transformar tu visión en una realidad digital impactante. Déjanos tus datos y un especialista se pondrá en contacto contigo en menos de 24 horas.",
+  "formInfoText": "Cuéntanos qué necesitas para tu marca. Sin compromiso, sin letra pequeña — solo una propuesta clara para tu proyecto.",
   "submitLabel": "SOLICITAR ASESORÍA",
   "serviceOptions": [
     { "value": "redes", "label": "Redes Sociales" },
