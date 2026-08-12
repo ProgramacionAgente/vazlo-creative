@@ -4,7 +4,7 @@
   "heroHeading": "Videos publicitarios con personas reales que venden",
   "heroHighlight": "personas reales",
   "heroSub": "Guion, grabación, edición y campaña de lanzamiento en un solo servicio: contenido auténtico que conecta mejor que un anuncio tradicional.",
-  "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
+  "image": "/images/servicios/creadores-ugc.jpg",
   "imageAlt": "Echo UGC {{brand}}",
   "features": [
     { "icon": "edit_document", "title": "Guion que vende", "desc": "Diseñamos el script del video vendedor pensado para convertir, no solo para entretener." },

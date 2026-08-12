@@ -6,7 +6,7 @@
   "heroHighlight": "enamoran",
   "heroSub": "Diseñamos tu identidad de marca completa —de la propuesta de logotipo al manual de identidad corporativa— y las piezas gráficas que la mantienen viva en cada punto de contacto.",
   "heroCtaLabel": "Solicitar servicio",
-  "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+  "image": "/images/servicios/diseno-grafico.jpg",
   "imageAlt": "Diseño Gráfico {{brand}}",
   "features": [
     { "icon": "brand_awareness", "title": "Identity: tu marca desde cero", "desc": "3 propuestas de logotipo en PDF, 1 ronda de cambios y, al autorizar, tu manual de identidad corporativa completo." },

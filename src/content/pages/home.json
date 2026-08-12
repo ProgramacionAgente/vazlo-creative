@@ -6,7 +6,7 @@
   "heroParagraph": "En {{brand}} combinamos diseño, contenido y estrategia para transformar tu presencia digital en resultados medibles y sostenibles.",
   "heroCtaPrimary": { "label": "Explorar servicios", "href": "#servicios" },
   "heroCtaSecondary": { "label": "Háblanos", "href": "/contacto" },
-  "heroImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80",
+  "heroImage": "/images/home/hero.jpg",
   "heroImageAlt": "Equipo {{brand}} trabajando en estrategia de marca",
   "servicesTag": "Servicios",
   "servicesHeading": "Soluciones que transforman tu negocio",

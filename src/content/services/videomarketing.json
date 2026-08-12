@@ -6,7 +6,7 @@
   "heroHighlight": "amplifican",
   "heroSub": "Reels, TikToks, YouTube y piezas para campañas en tres niveles de producción: básico, inter y completo. Elige por duración o contrata la suscripción semanal.",
   "heroCtaLabel": "Solicitar servicio",
-  "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80",
+  "image": "/images/servicios/videomarketing.jpg",
   "imageAlt": "Video Marketing {{brand}}",
   "features": [
     { "icon": "videocam", "title": "Tres niveles de producción", "desc": "Básico con transiciones simples, Inter con mockups, Completo con mockups y animaciones." },

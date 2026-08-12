@@ -6,7 +6,7 @@
   "heroHighlight": "precisión quirúrgica",
   "heroSub": "Gestionamos tus campañas de Google, Facebook, Instagram y TikTok Ads con análisis, segmentación y un agente asignado a tu cuenta.",
   "heroCtaLabel": "Solicitar servicio",
-  "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+  "image": "/images/servicios/campanas-publicitarias.jpg",
   "imageAlt": "Campañas Publicitarias {{brand}}",
   "features": [
     { "icon": "target", "title": "Segmentación precisa", "desc": "Análisis inicial y segmentación de tu mercado objetivo antes de lanzar cualquier campaña." },

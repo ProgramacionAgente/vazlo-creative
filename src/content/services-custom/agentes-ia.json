@@ -4,7 +4,7 @@
   "heroHeading": "Escala sin límites con inteligencia artificial autónoma",
   "heroHighlight": "inteligencia artificial",
   "heroSub": "Un agente de IA 24/7 por WhatsApp que atiende, cualifica y da seguimiento a tus clientes sin descanso. Configuración incluida por uno de nuestros ejecutivos.",
-  "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
+  "image": "/images/servicios/agentes-ia.jpg",
   "imageAlt": "Agentes de IA {{brand}}",
   "features": [
     { "icon": "schedule", "title": "Disponibilidad 24/7", "desc": "Tu agente de IA nunca duerme — atiende consultas y cualifica leads a cualquier hora, todos los días." },

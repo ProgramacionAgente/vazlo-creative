@@ -6,7 +6,7 @@
   "heroHighlight": "convierte",
   "heroSub": "Sitios en WordPress, económicos con plantilla Divi o a la medida con diseño desde cero, con hosting, SSL y correos corporativos incluidos.",
   "heroCtaLabel": "Solicitar servicio",
-  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+  "image": "/images/servicios/desarrollo-web.jpg",
   "imageAlt": "Desarrollo Web {{brand}}",
   "features": [
     { "icon": "devices", "title": "Económico o a la medida", "desc": "Plantilla Divi adaptada a tu imagen corporativa, o un diseño creado desde cero por tu diseñador web asignado." },
