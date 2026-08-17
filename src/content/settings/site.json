@@ -10,12 +10,17 @@
     { "label": "Contacto", "href": "/contacto" }
   ],
   "contact": {
-    "phone": "+52 55 0000 0000",
+    "phone": "+52 1 354 261 0307",
     "email": "hola@vazlocreative.com",
-    "location": "Ciudad de México, México",
+    "location": "Guadalajara, Jalisco",
     "formEndpoint": ""
   },
-  "socialLinks": [],
+  "socialLinks": [
+    { "label": "Facebook", "href": "https://www.facebook.com/vazlocreative", "icon": "link" },
+    { "label": "Instagram", "href": "https://www.instagram.com/vazlocreative", "icon": "link" },
+    { "label": "TikTok", "href": "https://www.tiktok.com/@vazlocreative", "icon": "link" },
+    { "label": "X", "href": "https://x.com/vazlocreative", "icon": "link" }
+  ],
   "analytics": { "plausibleDomain": "" },
   "footerTagline": "Estudio creativo que convierte ideas en marcas con identidad, estrategia y ejecución impecable.",
   "footerPages": [

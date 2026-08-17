@@ -11,7 +11,7 @@
   "features": [
     { "icon": "calendar_month", "title": "15 diseños al mes por red", "desc": "Parrilla de contenidos con copies, diseños y publicaciones. Hasta 6 pueden ser videos (8 si es TikTok)." },
     { "icon": "campaign", "title": "Trafficker incluido", "desc": "Dos propuestas de campaña de inversión publicitaria y un reporte mensual de crecimiento." },
-    { "icon": "forum", "title": "Community management", "desc": "Respuesta a mensajes y comentarios de 9:00 a 17:00, GMT-6 Centro CDMX." }
+    { "icon": "forum", "title": "Community management", "desc": "Respuesta a mensajes y comentarios de 9:00 a 17:00, GMT-6 Centro Guadalajara." }
   ],
   "plans": [
     { "name": "Break Shot", "sub": "1 red social", "price": "$400 USD/mes", "featured": false, "features": ["15 diseños al mes", "Community manager dedicado", "Trafficker: 2 propuestas de campaña", "Reporte mensual de crecimiento", "Plataforma Canva", "Plan anual: $4,000 USD (2 meses gratis)"] },
