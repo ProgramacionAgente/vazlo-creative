@@ -36,6 +36,24 @@ const usableFooterLinks = (footerLinks as LinkItem[]).filter((item) => item.href
 const usableBottomLinks = (footerBottomLinks as LinkItem[]).filter((item) => item.href && item.href !== '#');
 const phoneHref = `tel:${contact.phone.replace(/[^+\d]/g, '')}`;
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: brand,
+  url: `${origin}/`,
+  logo: new URL(logo.image, `${origin}/`).toString(),
+  ...(configuredSocialLinks.length ? { sameAs: configuredSocialLinks.map((item) => item.href).filter(Boolean) } : {}),
+  contactPoint: [{
+    '@type': 'ContactPoint',
+    telephone: contact.phone,
+    email: contact.email,
+    contactType: 'customer service',
+    areaServed: 'MX',
+    availableLanguage: ['Spanish'],
+  }],
+  ...(contact.location ? { address: { '@type': 'PostalAddress', addressLocality: contact.location } } : {}),
+};
+
 const hexToRgb = (hex: string) => {
   const h = hex.replace('#', '');
   const n = parseInt(h.length === 3 ? h.split('').map((character) => character + character).join('') : h, 16);
@@ -82,6 +100,7 @@ const rootStyle = `:root{${Object.entries(cssVars).map(([key, value]) => `${key}
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={socialImage} />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   <title>{title}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
