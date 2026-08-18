@@ -16,10 +16,10 @@
     "formEndpoint": ""
   },
   "socialLinks": [
-    { "label": "Facebook", "href": "https://www.facebook.com/vazlocreative", "icon": "link" },
-    { "label": "Instagram", "href": "https://www.instagram.com/vazlocreative", "icon": "link" },
-    { "label": "TikTok", "href": "https://www.tiktok.com/@vazlocreative", "icon": "link" },
-    { "label": "X", "href": "https://x.com/vazlocreative", "icon": "link" }
+    { "label": "Facebook", "href": "https://www.facebook.com/vazlocreative", "icon": "facebook" },
+    { "label": "Instagram", "href": "https://www.instagram.com/vazlocreative", "icon": "instagram" },
+    { "label": "TikTok", "href": "https://www.tiktok.com/@vazlocreative", "icon": "tiktok" },
+    { "label": "X", "href": "https://x.com/vazlocreative", "icon": "x" }
   ],
   "analytics": { "plausibleDomain": "" },
   "footerTagline": "Estudio creativo que convierte ideas en marcas con identidad, estrategia y ejecución impecable.",
